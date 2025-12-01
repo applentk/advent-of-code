@@ -1,5 +1,5 @@
-# Advent of code 2025
-This year I've decide to use AoC to practice rust, enjoy :D
+# Advent of Code 2025
+This year I've decide to use AoC to practice Rust, enjoy :D
 
 ## Run the solution
 If you tryna run, first you have to put input into `src/inputs` with
