@@ -12,7 +12,7 @@ fn part_1(inputs: &Vec<&str>) {
             .try_into()
             .unwrap();
 
-            for i in l..=r {
+        for i in l..=r {
             let k = i.to_string().chars().collect::<Vec<char>>();
             let mut valid = true;
 
