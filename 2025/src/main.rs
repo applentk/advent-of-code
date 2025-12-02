@@ -2,7 +2,7 @@
 use std::{fs, io};
 
 fn part_1(inputs: &Vec<&str>) {
-
+    
 }
 
 fn part_2(inputs: &Vec<&str>) {
