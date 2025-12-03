@@ -34,6 +34,7 @@ fn part_2(inputs: &Vec<&str>) {
 
     for s in inputs {
         let mut b = vec!['z'; s.len()];
+
         let mut cnt = 0;
         let mut best = 0;
 
@@ -53,7 +54,6 @@ fn part_2(inputs: &Vec<&str>) {
                 }
 
                 let num = num_str.parse::<i64>().unwrap();
-
                 if num > best {
                     best = num;
                     select = i as i32;
