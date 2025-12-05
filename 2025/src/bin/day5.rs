@@ -5,12 +5,14 @@ fn part_1(inputs: &Vec<&str>) {
     let mut a = vec![];
 
     while inputs[i] != "" {
-        let t = inputs[i]
+        let [l, r] = inputs[i]
             .split("-")
             .map(|x| x.parse::<i64>().unwrap())
-            .collect::<Vec<i64>>();
+            .collect::<Vec<i64>>()
+            .try_into()
+            .unwrap();
         
-        a.push((t[0], t[1]));
+        a.push((l, r));
         i += 1;
     }
 
@@ -25,8 +27,8 @@ fn part_1(inputs: &Vec<&str>) {
     let mut ans = 0;
     for x in b {
         let mut is_fresh = false;
-        for (l, r) in a.clone().into_iter() {
-            if l <= x && x <= r {
+        for (l, r) in &a {
+            if *l <= x && x <= *r {
                 is_fresh = true;
                 break;
             }
